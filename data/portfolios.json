@@ -1,0 +1,460 @@
+{
+  "portfolios": [
+    {
+      "id": "alpha",
+      "nombre": "Portafolio Alpha",
+      "descripcion": "Renta Fija — Conservador",
+      "patrimonio": 45200000,
+      "moneda": "PEN",
+      "cliente": "Empresa Constructora Inca S.A.",
+      "gestor": "Luciano Rosillo",
+      "fecha_inicio": "2021-01-15",
+      "benchmark": "Bonos Soberanos Perú",
+      "valor_historico": {
+        "inicio_anio": 43800000,
+        "inicio_mes": 44900000,
+        "inicio_semana": 45050000,
+        "hoy": 45200000
+      },
+      "benchmark_data": {
+        "nombre": "Bonos Soberanos Perú (SPBPGVPE)",
+        "wtd": 0.18,
+        "mtd": 0.52,
+        "ytd": 2.10,
+        "fuente": "bloomberg"
+      },
+      "saldos_caja": [
+        {
+          "banco": "BCP",
+          "cuenta": "193-2XXXXXX-0-01",
+          "moneda": "PEN",
+          "saldo": 1250000,
+          "fecha": "2026-04-11"
+        },
+        {
+          "banco": "BBVA",
+          "cuenta": "0011-0XXXXX-01",
+          "moneda": "PEN",
+          "saldo": 680000,
+          "fecha": "2026-04-11"
+        },
+        {
+          "banco": "Scotiabank",
+          "cuenta": "001-XXXXXXXX-1",
+          "moneda": "PEN",
+          "saldo": 410000,
+          "fecha": "2026-04-11"
+        }
+      ],
+      "total_caja": 2340000,
+      "flujos_periodo": [
+        { "fecha": "2026-04-03", "tipo": "aporte", "monto": 800000, "moneda": "PEN" },
+        { "fecha": "2026-04-09", "tipo": "retiro", "monto": 300000, "moneda": "PEN" }
+      ],
+      "validaciones": {
+        "stock_vs_eecc": {
+          "status": "ok",
+          "diferencias": 0,
+          "fecha_eecc": "2026-03-31",
+          "detalle": "Todas las posiciones concilian con EECC bancarios"
+        },
+        "patrimonio_vs_cuotas": {
+          "status": "ok",
+          "valor_cuota": 145.23,
+          "num_cuotas": 311234,
+          "patrimonio_calculado": 45195422,
+          "diferencia": 4578
+        },
+        "precios_input_vs_output": {
+          "status": "warning",
+          "items_con_diferencia": 1,
+          "detalle": "SBS_LETRAS: precio SBS 99.42 vs Bloomberg 99.45 (diff: 0.03)"
+        }
+      },
+      "ultima_generacion": {
+        "fecha": "2026-04-10T16:30:00",
+        "generado_por": "C. Quispe",
+        "version": 3,
+        "estado": "enviado"
+      },
+      "activos": [
+        {
+          "ticker": "PGOV32",
+          "isin": "PEP01000C2V9",
+          "nombre": "Bono Soberano Perú 2032",
+          "clase": "Bono Soberano",
+          "cantidad": 200000,
+          "precio_compra": 98.50,
+          "precio_actual": 99.20,
+          "rendimiento_ytd": 0.028,
+          "peso": 0.28,
+          "duracion": 7.3,
+          "moneda": "PEN",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "PGOV28",
+          "isin": "PEP01000B8T5",
+          "nombre": "Bono Soberano Perú 2028",
+          "clase": "Bono Soberano",
+          "cantidad": 150000,
+          "precio_compra": 97.80,
+          "precio_actual": 98.50,
+          "rendimiento_ytd": 0.022,
+          "peso": 0.22,
+          "duracion": 4.8,
+          "moneda": "PEN",
+          "fuente_precio": "sbs",
+          "ultima_actualizacion": "2026-04-11T09:30:00"
+        },
+        {
+          "ticker": "PBCP5A",
+          "isin": "PEP02100A1Z3",
+          "nombre": "Bono Corporativo BCP 2027",
+          "clase": "Bono Corporativo",
+          "cantidad": 100000,
+          "precio_compra": 100.00,
+          "precio_actual": 100.85,
+          "rendimiento_ytd": 0.031,
+          "peso": 0.18,
+          "duracion": 3.2,
+          "moneda": "PEN",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "PINTERB",
+          "isin": "PEP02200B2Y1",
+          "nombre": "Bono Interbank 2026",
+          "clase": "Bono Corporativo",
+          "cantidad": 80000,
+          "precio_compra": 99.50,
+          "precio_actual": 99.90,
+          "rendimiento_ytd": 0.018,
+          "peso": 0.15,
+          "duracion": 2.1,
+          "moneda": "PEN",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "SBS_LETRAS",
+          "isin": "PEG00100A0L8",
+          "nombre": "Letras del Tesoro (SBS)",
+          "clase": "Instrumento Monetario",
+          "cantidad": 500000,
+          "precio_compra": 99.00,
+          "precio_actual": 99.42,
+          "rendimiento_ytd": 0.015,
+          "peso": 0.12,
+          "duracion": 0.5,
+          "moneda": "PEN",
+          "fuente_precio": "sbs",
+          "ultima_actualizacion": "2026-04-11T09:30:00"
+        },
+        {
+          "ticker": "CASH_PEN",
+          "isin": null,
+          "nombre": "Efectivo y Equivalentes",
+          "clase": "Efectivo",
+          "cantidad": 1,
+          "precio_compra": 2340000,
+          "precio_actual": 2340000,
+          "rendimiento_ytd": 0.00,
+          "peso": 0.05,
+          "duracion": 0,
+          "moneda": "PEN",
+          "fuente_precio": "manual",
+          "ultima_actualizacion": "2026-04-11T08:00:00"
+        }
+      ],
+      "movimientos_mes": [
+        {"fecha": "2026-04-02", "tipo": "Compra", "ticker": "PGOV32", "cantidad": 20000, "precio": 98.90, "monto": 1978000},
+        {"fecha": "2026-04-03", "tipo": "Aporte", "ticker": null, "cantidad": null, "precio": null, "monto": 800000},
+        {"fecha": "2026-04-05", "tipo": "Venta", "ticker": "SBS_LETRAS", "cantidad": 100000, "precio": 99.40, "monto": 994000},
+        {"fecha": "2026-04-08", "tipo": "Cupón", "ticker": "PBCP5A", "cantidad": null, "precio": null, "monto": 37500},
+        {"fecha": "2026-04-09", "tipo": "Retiro", "ticker": null, "cantidad": null, "precio": null, "monto": 300000}
+      ]
+    },
+    {
+      "id": "beta",
+      "nombre": "Portafolio Beta",
+      "descripcion": "Mixto 60/40 — Moderado",
+      "patrimonio": 28500000,
+      "moneda": "USD",
+      "cliente": "Familia Mendoza",
+      "gestor": "Carlos Quispe",
+      "fecha_inicio": "2020-06-01",
+      "benchmark": "60% S&P 500 / 40% US Treasuries",
+      "valor_historico": {
+        "inicio_anio": 26800000,
+        "inicio_mes": 27900000,
+        "inicio_semana": 28200000,
+        "hoy": 28500000
+      },
+      "benchmark_data": {
+        "nombre": "Blended 60/40 (SPX 60% + UST 40%)",
+        "wtd": 0.95,
+        "mtd": 1.82,
+        "ytd": 5.40,
+        "fuente": "bloomberg"
+      },
+      "saldos_caja": [
+        {
+          "banco": "JPMorgan Chase",
+          "cuenta": "XXXX-XXXXX-001",
+          "moneda": "USD",
+          "saldo": 820000,
+          "fecha": "2026-04-11"
+        },
+        {
+          "banco": "BCP Cuenta USD",
+          "cuenta": "193-9XXXXXX-0-40",
+          "moneda": "USD",
+          "saldo": 605000,
+          "fecha": "2026-04-11"
+        }
+      ],
+      "total_caja": 1425000,
+      "flujos_periodo": [
+        { "fecha": "2026-04-01", "tipo": "aporte", "monto": 500000, "moneda": "USD" }
+      ],
+      "validaciones": {
+        "stock_vs_eecc": {
+          "status": "ok",
+          "diferencias": 0,
+          "fecha_eecc": "2026-03-31",
+          "detalle": "Todas las posiciones concilian con EECC bancarios"
+        },
+        "patrimonio_vs_cuotas": {
+          "status": "ok",
+          "valor_cuota": 218.46,
+          "num_cuotas": 130468,
+          "patrimonio_calculado": 28498210,
+          "diferencia": 1790
+        },
+        "precios_input_vs_output": {
+          "status": "ok",
+          "items_con_diferencia": 0,
+          "detalle": "Todos los precios concilian entre Bloomberg y sistema"
+        }
+      },
+      "ultima_generacion": {
+        "fecha": "2026-04-10T15:45:00",
+        "generado_por": "C. Quispe",
+        "version": 2,
+        "estado": "enviado"
+      },
+      "activos": [
+        {
+          "ticker": "SPY",
+          "isin": "US78462F1030",
+          "nombre": "SPDR S&P 500 ETF Trust",
+          "clase": "Renta Variable",
+          "cantidad": 15000,
+          "precio_compra": 420.00,
+          "precio_actual": 505.80,
+          "rendimiento_ytd": 0.082,
+          "peso": 0.35,
+          "duracion": null,
+          "moneda": "USD",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "QQQ",
+          "isin": "US46090E1038",
+          "nombre": "Invesco QQQ Trust (NASDAQ-100)",
+          "clase": "Renta Variable",
+          "cantidad": 8000,
+          "precio_compra": 380.00,
+          "precio_actual": 425.50,
+          "rendimiento_ytd": 0.064,
+          "peso": 0.20,
+          "duracion": null,
+          "moneda": "USD",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "IEF",
+          "isin": "US4642874329",
+          "nombre": "iShares 7-10 Year Treasury Bond ETF",
+          "clase": "Renta Fija",
+          "cantidad": 50000,
+          "precio_compra": 98.20,
+          "precio_actual": 96.80,
+          "rendimiento_ytd": -0.018,
+          "peso": 0.25,
+          "duracion": 8.1,
+          "moneda": "USD",
+          "fuente_precio": "ishares",
+          "ultima_actualizacion": "2026-04-11T09:15:00"
+        },
+        {
+          "ticker": "AGG",
+          "isin": "US4642872422",
+          "nombre": "iShares Core US Aggregate Bond ETF",
+          "clase": "Renta Fija",
+          "cantidad": 40000,
+          "precio_compra": 100.50,
+          "precio_actual": 98.90,
+          "rendimiento_ytd": -0.012,
+          "peso": 0.15,
+          "duracion": 6.2,
+          "moneda": "USD",
+          "fuente_precio": "ishares",
+          "ultima_actualizacion": "2026-04-11T09:15:00"
+        },
+        {
+          "ticker": "CASH_USD",
+          "isin": null,
+          "nombre": "Efectivo USD",
+          "clase": "Efectivo",
+          "cantidad": 1,
+          "precio_compra": 1425000,
+          "precio_actual": 1425000,
+          "rendimiento_ytd": 0.00,
+          "peso": 0.05,
+          "duracion": 0,
+          "moneda": "USD",
+          "fuente_precio": "manual",
+          "ultima_actualizacion": "2026-04-11T08:00:00"
+        }
+      ],
+      "movimientos_mes": [
+        {"fecha": "2026-04-01", "tipo": "Aporte", "ticker": null, "cantidad": null, "precio": null, "monto": 500000},
+        {"fecha": "2026-04-01", "tipo": "Compra", "ticker": "SPY", "cantidad": 500, "precio": 503.20, "monto": 251600},
+        {"fecha": "2026-04-07", "tipo": "Dividendo", "ticker": "SPY", "cantidad": null, "precio": null, "monto": 12500}
+      ]
+    },
+    {
+      "id": "gamma",
+      "nombre": "Portafolio Gamma",
+      "descripcion": "Renta Variable — Agresivo",
+      "patrimonio": 12100000,
+      "moneda": "USD",
+      "cliente": "Fondo de Pensiones Norte",
+      "gestor": "Marcos Ruiz",
+      "fecha_inicio": "2022-03-10",
+      "benchmark": "MSCI Emerging Markets",
+      "valor_historico": {
+        "inicio_anio": 10800000,
+        "inicio_mes": 11600000,
+        "inicio_semana": 11900000,
+        "hoy": 12100000
+      },
+      "benchmark_data": {
+        "nombre": "MSCI Emerging Markets (MXEF)",
+        "wtd": 1.61,
+        "mtd": 3.20,
+        "ytd": 8.90,
+        "fuente": "bloomberg"
+      },
+      "saldos_caja": [
+        {
+          "banco": "Citibank",
+          "cuenta": "XXXX-001-USD",
+          "moneda": "USD",
+          "saldo": 1815000,
+          "fecha": "2026-04-11"
+        }
+      ],
+      "total_caja": 1815000,
+      "flujos_periodo": [],
+      "validaciones": {
+        "stock_vs_eecc": {
+          "status": "warning",
+          "diferencias": 1,
+          "fecha_eecc": "2026-03-31",
+          "detalle": "VALE: EECC reporta 79800 unidades vs sistema 80000 (diff: 200 unidades)"
+        },
+        "patrimonio_vs_cuotas": {
+          "status": "ok",
+          "valor_cuota": 89.12,
+          "num_cuotas": 135766,
+          "patrimonio_calculado": 12097600,
+          "diferencia": 2400
+        },
+        "precios_input_vs_output": {
+          "status": "ok",
+          "items_con_diferencia": 0,
+          "detalle": "Todos los precios concilian entre Bloomberg y sistema"
+        }
+      },
+      "ultima_generacion": {
+        "fecha": "2026-04-08T17:00:00",
+        "generado_por": "M. Ruiz",
+        "version": 1,
+        "estado": "revisado"
+      },
+      "activos": [
+        {
+          "ticker": "MELI",
+          "isin": "US58733R1023",
+          "nombre": "MercadoLibre Inc.",
+          "clase": "Renta Variable LatAm",
+          "cantidad": 5000,
+          "precio_compra": 1250.00,
+          "precio_actual": 1680.50,
+          "rendimiento_ytd": 0.145,
+          "peso": 0.30,
+          "duracion": null,
+          "moneda": "USD",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "VALE",
+          "isin": "US91912E1055",
+          "nombre": "Vale S.A. (ADR)",
+          "clase": "Renta Variable LatAm",
+          "cantidad": 80000,
+          "precio_compra": 14.20,
+          "precio_actual": 16.80,
+          "rendimiento_ytd": 0.098,
+          "peso": 0.25,
+          "duracion": null,
+          "moneda": "USD",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "VWO",
+          "isin": "US9220427424",
+          "nombre": "Vanguard Emerging Markets ETF",
+          "clase": "Renta Variable Emergente",
+          "cantidad": 100000,
+          "precio_compra": 42.50,
+          "precio_actual": 44.80,
+          "rendimiento_ytd": 0.042,
+          "peso": 0.30,
+          "duracion": null,
+          "moneda": "USD",
+          "fuente_precio": "bloomberg",
+          "ultima_actualizacion": "2026-04-11T10:00:00"
+        },
+        {
+          "ticker": "CASH_USD_G",
+          "isin": null,
+          "nombre": "Efectivo USD",
+          "clase": "Efectivo",
+          "cantidad": 1,
+          "precio_compra": 1815000,
+          "precio_actual": 1815000,
+          "rendimiento_ytd": 0.00,
+          "peso": 0.15,
+          "duracion": 0,
+          "moneda": "USD",
+          "fuente_precio": "manual",
+          "ultima_actualizacion": "2026-04-11T08:00:00"
+        }
+      ],
+      "movimientos_mes": [
+        {"fecha": "2026-04-03", "tipo": "Compra", "ticker": "MELI", "cantidad": 200, "precio": 1675.00, "monto": 335000},
+        {"fecha": "2026-04-06", "tipo": "Venta", "ticker": "VALE", "cantidad": 5000, "precio": 16.75, "monto": 83750}
+      ]
+    }
+  ]
+}

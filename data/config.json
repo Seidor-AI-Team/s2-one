@@ -1,0 +1,160 @@
+{
+  "version": "2.0.0",
+  "ultima_actualizacion": "2026-04-11T16:02:21.977320",
+  "integraciones": {
+    "bloomberg": {
+      "habilitado": true,
+      "nombre": "Bloomberg Terminal API",
+      "descripcion": "Precios en tiempo real para renta variable global y bonos corporativos internacionales",
+      "api_key": "********",
+      "endpoint": "https://api.bloomberg.com/v1",
+      "limite_requests": 10000,
+      "usado_hoy": 342,
+      "estado": "conectado",
+      "ultimo_check": "2026-04-11T14:45:00",
+      "latency_ms": 145
+    },
+    "sbs_peru": {
+      "habilitado": true,
+      "nombre": "SBS Perú - SMV",
+      "descripcion": "Precios oficiales de instrumentos de renta fija peruana (bonos soberanos, corporativos)",
+      "api_key": "********",
+      "endpoint": "https://www.sbs.gob.pe/app/spi/portal/",
+      "limite_requests": 5000,
+      "usado_hoy": 128,
+      "estado": "conectado",
+      "ultimo_check": "2026-04-11T14:50:00",
+      "latency_ms": 890
+    },
+    "ishares": {
+      "habilitado": true,
+      "nombre": "BlackRock iShares",
+      "descripcion": "NAV diario de ETFs iShares para benchmarks de renta variable",
+      "api_key": null,
+      "endpoint": "https://www.ishares.com/us/products/etf-overview",
+      "limite_requests": null,
+      "usado_hoy": 45,
+      "estado": "conectado",
+      "ultimo_check": "2026-04-11T14:30:00",
+      "latency_ms": 320
+    },
+    "bancos_custodia": {
+      "habilitado": true,
+      "nombre": "Bancos Custodia Perú",
+      "descripcion": "Saldos de caja y posiciones de tesorería (BCP, BBVA, Scotiabank, etc.)",
+      "bancos_configurados": [
+        {
+          "banco": "BCP",
+          "habilitado": true,
+          "tipo_conexion": "SWIFT MT940",
+          "cuentas": [
+            "194-1234567-0-38",
+            "194-7654321-1-95"
+          ],
+          "estado": "conectado",
+          "ultimo_sync": "2026-04-11T14:55:00"
+        },
+        {
+          "banco": "BBVA",
+          "habilitado": true,
+          "tipo_conexion": "API B2B",
+          "cuentas": [
+            "0011-1234-5678901234"
+          ],
+          "estado": "conectado",
+          "ultimo_sync": "2026-04-11T14:52:00"
+        },
+        {
+          "banco": "Scotiabank",
+          "habilitado": true,
+          "tipo_conexion": "Host-to-Host",
+          "cuentas": [
+            "000-1234567"
+          ],
+          "estado": "conectado",
+          "ultimo_sync": "2026-04-11T14:48:00"
+        },
+        {
+          "banco": "JPMorgan",
+          "habilitado": true,
+          "tipo_conexion": "API Treasury",
+          "cuentas": [
+            "123456789",
+            "987654321"
+          ],
+          "estado": "conectado",
+          "ultimo_sync": "2026-04-11T14:40:00"
+        },
+        {
+          "banco": "Citibank",
+          "habilitado": false,
+          "tipo_conexion": "SWIFT MT950",
+          "cuentas": [],
+          "estado": "desconectado",
+          "ultimo_sync": null
+        }
+      ],
+      "estado_global": "parcial",
+      "total_saldos_sync": 4
+    },
+    "openai": {
+      "habilitado": true,
+      "nombre": "OpenAI GPT-4o",
+      "descripcion": "Generación de narrativa y análisis de portafolios",
+      "api_key_configurada": true,
+      "modelo": "gpt-4o",
+      "max_tokens": 450,
+      "temperature": 0.4,
+      "estado": "conectado",
+      "ultimo_uso": "2026-04-11T15:20:00",
+      "requests_hoy": 23,
+      "limite_diario": 500
+    }
+  },
+  "fuentes_por_clase": {
+    "Bono Soberano": [
+      "sbs_peru",
+      "bloomberg"
+    ],
+    "Bono Corporativo": [
+      "sbs_peru",
+      "bloomberg"
+    ],
+    "Instrumento Monetario": [
+      "sbs_peru"
+    ],
+    "Renta Variable": [
+      "bloomberg",
+      "ishares"
+    ],
+    "Renta Variable LatAm": [
+      "bloomberg",
+      "ishares"
+    ],
+    "Renta Variable Emergente": [
+      "bloomberg",
+      "ishares"
+    ],
+    "Efectivo": [
+      "bancos_custodia"
+    ]
+  },
+  "validaciones_activas": {
+    "stock_vs_eecc": true,
+    "patrimonio_vs_cuotas": true,
+    "precios_input_vs_output": true,
+    "diferencia_maxima_precio": 0.5
+  },
+  "generacion_automatica": {
+    "habilitada": false,
+    "horario": "08:00",
+    "dia_mes": [
+      1,
+      15
+    ],
+    "email_notificaciones": [
+      "carlos.quispe@macro.pe",
+      "luciano.rosillo@macro.pe"
+    ]
+  }
+}
